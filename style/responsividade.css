@@ -1,0 +1,8 @@
+@media (max-width:500px) {
+    body {
+        padding: 10px;
+    }
+    .container{
+        flex-direction: column;
+    }
+}

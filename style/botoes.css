@@ -1,0 +1,21 @@
+.botao {
+    background-color: var(--cor-botao-enviar);
+    border: none;
+    box-shadow: 0 0 1em var(--cor-sombra-escura);
+    border-radius: 2em;
+    padding: 0.5em 1.3em;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: 'Shantell Sans', cursive;
+}
+
+.resetar {
+    background-color: var(--cor-botao-resetar);
+}
+
+.botao:hover {
+    box-shadow: 0 0 1em var(--cor-sombra-clara);
+}
+.botao:active {
+    box-shadow: 0 0 3em var(--cor-sombra-clara);
+}

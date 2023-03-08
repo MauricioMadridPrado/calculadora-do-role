@@ -1,0 +1,37 @@
+.container {
+    display: flex;
+    justify-content: center;
+
+    gap: 1.75em;
+
+}
+
+.formulario {
+    padding: 2.25em;
+    gap: 1em;
+}
+
+.formulario,
+.lista {
+    display: flex;
+    max-height: 370px;
+    flex-direction: column;
+    background-color: var(--cor-fundo-containers);
+    border-radius: 2rem;
+    box-shadow: 0 0 0.8em var(--cor-sombra-clara);
+
+}
+
+.entrada-titulo {
+    font-size: 1.25rem;
+}
+
+.entrada {
+    padding: 0.7em;
+    border-radius: 1em;
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 0 1em var(--cor-sombra-escura);
+    text-transform: lowercase;
+}
+

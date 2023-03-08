@@ -1,0 +1,78 @@
+.lista{
+    padding: 1em;
+}
+.totalCompras {
+    background-color: var(--cor-escura1);
+    align-self: center;
+    justify-self: center;
+    max-width: fit-content;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--cor-sombra-escura);
+}
+
+.listaCabecalho{
+    display: flex;
+    flex-direction: column; 
+
+    border-radius: 1em;
+
+}
+.container-dividir{
+
+    display: flex;
+    gap: 1em;
+    justify-content: space-evenly;
+
+}
+.rotulo-dividir{
+    padding: 0.2em;
+    text-align: center;
+}
+.input-dividir{
+    background-color: var(--cor-clara1);
+    width: 3em;
+    text-align: center;
+}
+.dividir {
+    font-size: 1em;
+    padding: 0;
+    border-radius: 1em;
+
+}
+.listaCompras{
+    display: block;
+    height: 150px;
+    overflow-y: auto;
+    box-shadow: 0px 5px 10px var(--cor-escura1);
+
+}
+
+th,
+td {
+    max-height: 0.7em;
+    padding: 0 2em;
+    border: 1px solid black;
+
+}
+td{
+    background-color: var(--cor-clara1);
+    text-align: center;
+    text-transform: uppercase;
+
+}
+.tabela-cabecalho{
+    background-color: var(--cor-escura2);
+    font-weight: 700;
+}
+
+.listaCompras {
+    padding: 10xp;
+}
+
+.botaoDeleta{
+    background: var(--cor-botao-deleta);
+    border: none;
+    box-shadow: 0 0 10px var(--cor-sombra-escura);
+    font-weight: 700;
+}

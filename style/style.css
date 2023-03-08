@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@400;700&display=swap');
+@import url(./reset.css);
+@import url(./main.css);
+@import url(./botoes.css);
+@import url(./cabecalho.css);
+@import url(./rodape.css);
+@import url(./lista.css);
+@import url(./responsividade.css);
+
+
+
+:root {
+  --cor-fundo-da-pagina: #000000;
+  --cor-escura1: rgb(241, 190, 96);
+  --cor-escura2: rgb(236, 204, 143);
+  --cor-clara1: rgb(235, 220, 193);
+  --cor-fundo-containers: #f5deb3;
+  --cor-botao-enviar: rgb(245, 226, 191);
+  --cor-botao-resetar: rgb(244, 214, 160);
+  --cor-sombra-clara: #ffffff;
+  --cor-sombra-escura: rgba(0, 0, 0, 0.3);
+  --cor-botao-deleta: rgb(255, 120, 30);
+}
+
+body {
+  background-color: var(--cor-fundo-da-pagina);
+  font-family: 'Shantell Sans', cursive;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}

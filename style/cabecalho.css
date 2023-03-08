@@ -1,0 +1,11 @@
+.cabecalho {
+
+    text-align: center;
+}
+
+.titulo-pagina{
+    font-size: 3rem;
+    color: var(--cor-escura2);
+    align-self: center;
+    justify-self: center;
+}

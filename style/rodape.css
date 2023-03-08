@@ -1,0 +1,14 @@
+.rodape{
+    text-align: center;
+}
+.rodape-texto{
+    color: var(--cor-clara1);
+}
+.rodape-link{
+    color: var(--cor-escura1);
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+.rodape-link:hover {
+    text-decoration: underline;
+}

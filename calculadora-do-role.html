@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <title>Calculadora do rolê</title>
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1 class="titulo-pagina">Calculadora do rolê</h1>
+    </header>
+    <main class="container">
+        <!-- <input id="teste" class="teste botao" type="button" value="teste"> -->
+        <form class="formulario" id="formulario">
+
+            <label class="entrada-titulo" for="nomeItem">Produto</label>
+            <input id="nomeItem" class="entrada" name="nomeItem" type="text" required>
+
+
+            <label class="entrada-titulo" for="valor">Valor</label>
+            <input id="valor" class="entrada" name="valor" type="text" required>
+
+            <input id="enviar" class="enviar botao" type="submit">
+            <input id="resetar" class="resetar botao" type="button" value="Reseta lista">
+        </form>
+        <section class="lista">
+            <div class="listaCabecalho">
+                <p class="totalCompras">Total em produtos: <strong class="valorFinal" id="valorFinal"> </strong> R$</p>
+                <div class="container-dividir">
+                    <label class="rotulo-dividir" for="dividir">Quantos amigos <br> no rolê:</label>
+           
+                        <input class="input-dividir entrada" id="quantidadeAmigos" type="number" name="dividir" value="1">
+
+                </div>
+                <p class="totalPorAmigo totalCompras">Total por amigo: <strong class="totalPorAmigo" id="totalPorAmigo"> </strong> R$</p>
+            </div>
+            <table class="listaCompras" id="listaCompras">
+                <tr class="tabela-cabecalho">
+                    <th>Produto</th>
+                    <th>Valor</th>
+                </tr>
+
+
+            </table>
+
+        </section>
+
+
+    </main>
+    <footer class="rodape">
+        <p class="rodape-texto">Desenvolvido por <a class="rodape-link"
+                href="https://www.linkedin.com/in/maur%C3%ADcio-madrid-prado-21761022b/">Maurício Prado</a></p>
+    </footer>
+
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
