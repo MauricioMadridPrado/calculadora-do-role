@@ -1,3 +1,5 @@
+// consts
+
 const form = document.getElementById("formulario")
 const lista = document.getElementById("listaCompras")
 const total = document.getElementById("valorFinal")
@@ -10,21 +12,24 @@ const teste = [
     amigos,
     lista
 ]
-
-
+// 
+// DIVISAO DO TOTAL POR AMIGOS
+// 
 
 amigos.addEventListener ("change", divide)
 lista.addEventListener ("change", divide)
 
-function divide() {
-    const numeroDeAmigos = document.getElementById("quantidadeAmigos").value
-    const totalPorAmigo = parseFloat(valorFinal)/ parseFloat(numeroDeAmigos);
-    valorDividido.innerHTML = totalPorAmigo.toFixed(2)
-}
+// 
+// CRIA ELEMENTOS AO CARREGAR A PÁGINA (DO LOCAL STORAGE)
+// 
 itens.forEach((elemento => {
     somaValor(elemento.valor);
     criaItem(elemento);
 }))
+
+// 
+// SUBMIT QUE CRIA UM ITEM NA LISTA, OU ALTERA SEU VALOR SE ELE JÁ EXISTIR
+// 
 
 form.addEventListener("submit", (evento) => {
     evento.preventDefault();
@@ -57,6 +62,10 @@ form.addEventListener("submit", (evento) => {
     valor.value = "";  
 })
 
+// 
+// ALTERA LISTA
+// 
+
 function criaItem(itemAtual) {
     const linha = document.createElement("tr")
     const novoItem = document.createElement("td")
@@ -72,6 +81,29 @@ function criaItem(itemAtual) {
     lista.appendChild(linha); 
 }
 
+function criaBotaoDeleta(id, valor) {
+    const botaoDeleta = document.createElement("button")
+    botaoDeleta.innerHTML= "X";
+    botaoDeleta.addEventListener("click", function(evento) {
+        deletaLinha(evento.target.parentNode, id, valor)
+    })
+    return botaoDeleta;
+}
+
+function deletaLinha(tag, id,valor) {
+    subtraiValor(valor);
+    itens.splice(itens[id],1);
+    localStorage.setItem("itens", JSON.stringify(itens));
+    tag.remove();
+    divide()
+}
+
+
+// 
+// CALCULOS
+// 
+
+
 function somaValor(valor){
     let valorAjustado = parseFloat(valor.replace(',','.'));
     valorFinal += parseFloat(valorAjustado);
@@ -83,25 +115,19 @@ function subtraiValor(valor){
     total.innerHTML = valorFinal.toFixed(2);
 }
 
+function divide() {
+    const numeroDeAmigos = document.getElementById("quantidadeAmigos").value
+    const totalPorAmigo = parseFloat(valorFinal)/ parseFloat(numeroDeAmigos);
+    valorDividido.innerHTML = totalPorAmigo.toFixed(2)
+}
+
 function alteraValor (item){
     document.querySelector("[data-id='"+item.id+"']").innerHTML = item.valor +" R$";
 }
 
-function criaBotaoDeleta(id, valor) {
-    const botaoDeleta = document.createElement("button")
-    botaoDeleta.innerHTML= "X";
-    botaoDeleta.addEventListener("click", function(evento) {
-        deletaLinha(evento.target.parentNode, id, valor)
-    })
-    return botaoDeleta;
-}
-function deletaLinha(tag, id,valor) {
-    subtraiValor(valor);
-    itens.splice(itens[id],1);
-    localStorage.setItem("itens", JSON.stringify(itens));
-    tag.remove();
-    divide()
-}
+// 
+// RESETA A LISTA
+// 
 const reseta = document.getElementById("resetar");
 reseta.addEventListener("click", () => {
     location.reload();
